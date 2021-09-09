@@ -4,15 +4,15 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.version }}
+    - ${{ inputs.kubectlVersion }}
     - ${{ inputs.config }}
     - ${{ inputs.command }}
 branding:
   icon: 'terminal'
   color: 'blue'
 inputs:
-  version:
-    description: 'kubectl version, e.g. `v1.21.0`, defaults to latest'
+  kubectlVersion:
+    description: 'kubectl version, e.g. `v1.22.1`, defaults to latest'
     required: false
     default: latest
   config:
