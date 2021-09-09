@@ -3,14 +3,18 @@
 set -e
 
 kubectlVersion="$1"
-kubeConfigData="$2"
-command="$3"
+helmVersion="$2"
+helmSecretsVersion="$3"
+kubeConfigData="$4"
+command="$5"
 
 if [ "$kubectlVersion" = "latest" ]; then
   kubectlVersion=$(curl -Ls https://dl.k8s.io/release/stable.txt)
 fi
 
 echo "using kubectl@$kubectlVersion"
+echo "using helm@$helmVersion"
+echo "using helm-secrets@$helmSecretsVersion"
 
 curl -sLO "https://dl.k8s.io/release/$kubectlVersion/bin/linux/amd64/kubectl" -o kubectl
 chmod +x kubectl

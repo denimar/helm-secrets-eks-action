@@ -22,7 +22,7 @@ inputs:
     required: false
     default: latest
   helmSecretsVersion:
-    description: 'kubectl version, e.g. `v3.8.3`, defaults to latest'
+    description: 'helm secrets version, e.g. `v3.8.3`, defaults to latest'
     required: false
     default: latest
   kubeConfigData:
