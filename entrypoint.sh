@@ -3,7 +3,7 @@
 set -e
 
 kubectlVersion="$1"
-config="$2"
+kubeConfigData="$2"
 command="$3"
 
 if [ "$kubectlVersion" = "latest" ]; then
@@ -17,7 +17,7 @@ chmod +x kubectl
 mv kubectl /usr/local/bin
 
 # Extract the base64 encoded config data and write this to the KUBECONFIG
-echo "$config" | base64 -d > /tmp/config
-export KUBECONFIG=/tmp/config
+echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
+export KUBECONFIG=/tmp/kubeConfigData
 
 sh -c "kubectl $command"

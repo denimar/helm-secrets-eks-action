@@ -5,7 +5,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.kubectlVersion }}
-    - ${{ inputs.config }}
+    - ${{ inputs.kubeConfigData }}
     - ${{ inputs.command }}
 branding:
   icon: 'terminal'
@@ -15,7 +15,7 @@ inputs:
     description: 'kubectl version, e.g. `v1.22.1`, defaults to latest'
     required: false
     default: latest
-  config:
+  kubeConfigData:
     description: 'kube config data'
     required: true
   command:
