@@ -15,6 +15,7 @@ fi
 echo "using kubectl@$kubectlVersion"
 echo "using helm@$helmVersion"
 echo "using helm-secrets@$helmSecretsVersion"
+cat /etc/*release
 
 curl -sLO "https://dl.k8s.io/release/$kubectlVersion/bin/linux/amd64/kubectl" -o kubectl
 chmod +x kubectl
