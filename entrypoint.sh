@@ -23,6 +23,14 @@ mv kubectl /usr/local/bin
 # Installing helm secrets
 helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 
+# Installing go
+export GOROOT="/usr/lib/go"
+export GOPATH="/go"
+export PATH="/go/bin:$PATH"
+mkdir -p "${GOPATH}/src" "${GOPATH}/bin"
+WORKDIR "$GOPATH"
+make
+
 # Installing sops
 go get -u go.mozilla.org/sops/v3/cmd/sops
 cd $GOPATH/src/go.mozilla.org/sops/
