@@ -27,7 +27,7 @@ helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 echo "******************************************"
 echo "installing go version 1.10.3..." 
 echo "******************************************"
-apk add .build-deps gcc go 
+apk add gcc go 
 wget -O go.tgz https://golang.org/dl/go1.10.3.linux-amd64.tar.gz
 tar -C /usr/local -xzf go.tgz 
 cd /usr/local/go/src/ 
@@ -35,7 +35,6 @@ cd /usr/local/go/src/
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH=/opt/go/ 
 export PATH=$PATH:$GOPATH/bin 
-apk del .build-deps 
 go version
 
 echo "******************************************"
