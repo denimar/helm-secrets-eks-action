@@ -24,4 +24,6 @@ mv kubectl /usr/local/bin
 echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
 export KUBECONFIG=/tmp/kubeConfigData
 
+echo "*************************************"
 sh -c $command
+echo "*************************************"
