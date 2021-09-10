@@ -25,5 +25,5 @@ echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
 export KUBECONFIG=/tmp/kubeConfigData
 
 echo "*************************************"
-sh -c $command
+sh -c "$command"
 echo "*************************************"
