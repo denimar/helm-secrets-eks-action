@@ -24,10 +24,8 @@ mv kubectl /usr/local/bin
 # Installing helm secrets
 helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 
-##
-apk make musl-dev go
-
 # Installing go
+apk make musl-dev go
 wget -O go.tgz https://dl.google.com/go/go1.10.3.src.tar.gz 
 tar -C /usr/local -xzf go.tgz 
 cd /usr/local/go/src/ 
