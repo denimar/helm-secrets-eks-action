@@ -11,7 +11,7 @@ LABEL com.github.actions.description="Kubectl + Helm + Helm Secrets to work with
 LABEL com.github.actions.icon="terminal"
 LABEL com.github.actions.color="blue"
 
-RUN apk add py-pip curl wget ca-certificates git bash jq gcc alpine-sdk make musl-dev go
+RUN apk add py-pip curl wget ca-certificates git bash jq gcc alpine-sdk
 RUN pip install 'awscli==1.20.8'
 
 RUN curl -o /usr/bin/aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
