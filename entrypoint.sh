@@ -20,7 +20,7 @@ curl -sLO "https://dl.k8s.io/release/$kubectlVersion/bin/linux/amd64/kubectl" -o
 chmod +x kubectl
 mv kubectl /usr/local/bin
 
-helm plugin install https://github.com/jkroepke/helm-secrets v3.8.3
+helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 
 # Extract the base64 encoded config data and write this to the KUBECONFIG
 echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
