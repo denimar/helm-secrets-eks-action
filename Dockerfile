@@ -1,4 +1,4 @@
-FROM golang:alpine3.14
+FROM mozilla/sops:v3-alpine
 
 LABEL version="1.0.0"
 LABEL name="helm-secrets-eks-action"
