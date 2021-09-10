@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:latest
 
 LABEL version="1.0.0"
 LABEL name="helm-secrets-eks-action"
