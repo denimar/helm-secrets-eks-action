@@ -29,7 +29,7 @@ export GOROOT="/usr/lib/go"
 export GOPATH="/go"
 export PATH="/go/bin:$PATH"
 mkdir -p "${GOPATH}/src" "${GOPATH}/bin"
-WORKDIR "$GOPATH"
+export WORKDIR "$GOPATH"
 make
 
 # Installing sops
