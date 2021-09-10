@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM golang:alpine3.14
 
 LABEL version="1.0.0"
 LABEL name="helm-secrets-eks-action"
